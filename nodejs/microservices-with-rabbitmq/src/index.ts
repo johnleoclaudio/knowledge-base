@@ -1,10 +1,11 @@
 require('dotenv').config();
 
-const app = require('express')();
-const bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
 
-const { rootHandler, orderHandler } = require('./handlers');
+import { rootHandler, orderHandler } from './handlers';
 
+const app = express();
 const PORT = process.env.PORT;
 
 app.use(bodyParser.json());

@@ -1,4 +1,4 @@
-module.exports = (req, res) => {
+const root = (req, res) => {
   const message = 'Welcome to root!';
 
   console.log(message);
@@ -6,3 +6,5 @@ module.exports = (req, res) => {
     message,
   });
 };
+
+export default root;

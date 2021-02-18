@@ -1,6 +1,6 @@
-const amqp = require('amqplib');
+import amqp from 'amqplib';
 
-const { publishToChannel } = require('../utils/queue-utils');
+import { publishToChannel } from '../utils/queue-utils';
 
 const QURL = process.env.QURL;
 
@@ -25,4 +25,4 @@ const orderHandler = async (req, res) => {
   res.send({ orderId });
 };
 
-module.exports = orderHandler;
+export default orderHandler;

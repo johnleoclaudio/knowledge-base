@@ -10,10 +10,10 @@ const publishToChannel = (channel, { routingKey, exchangeName, data }) => {
           return reject(err);
         }
 
-        resolve();
+        resolve(ok);
       },
     );
   });
 };
 
-module.exports = { publishToChannel };
+export { publishToChannel };
